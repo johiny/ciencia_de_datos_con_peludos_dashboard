@@ -3,13 +3,14 @@ import styled from 'styled-components'
 import Chart from './Chart'
 import sciDog from './media/sci_dog.png'
 import Footer from './Footer'
-
 const app = () => {
   return (
     <AppContainer>
       <TitleContainer>
-        Ciencia de Datos Con Peludos
-        <img src={sciDog}/></TitleContainer>
+        <h1>Ciencia de Datos Con Peludos</h1>
+        <img src={sciDog}/>
+        <h2>Descubramos que nos dicen los datos sobre nuestros mejores amigos</h2>
+        </TitleContainer>
       <ChartsContainer>
       <Chart title='Top 10 perros mas populares' link='//datawrapper.dwcdn.net/eyaXM/1/'/>
       <Chart title='Top 10 perros más caros de mantener' link='//datawrapper.dwcdn.net/yKoRF/1/'/>
@@ -32,8 +33,11 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #121212;
+  background-color: #FFFFFF;
   justify-items: center;
+  background-image: url('./src/media/Polygon_Luminary.svg') ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 `
 const ChartsContainer = styled.div`
   display: grid;
@@ -42,21 +46,33 @@ const ChartsContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
 `
-const TitleContainer = styled.h1`
+const TitleContainer = styled.div`
   text-align: center;
   color: #faf7f5;
-  font-family: Arial, Helvetica, sans-serif;
+  h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 700;
   font-size: 5vh;
+  }
+  h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 3vh;
+  }
   > img{
-    position: relative;
-    width: 3vw;
-    top: 1vh;
-    margin-left: 1vw;
+    position: absolute;
+    width: 5vw;
+    top: 1%;
+    left: 69%;
   }
 `
 const GradioContainer = styled.div`
   margin-left: 5vw;
   margin-right: 5vw;
+  padding: 1vh solid #4B5563;
+  border-radius: 2%;
+  background-color: #4B5563;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  margin-bottom: 1vh;
 `
 export default app

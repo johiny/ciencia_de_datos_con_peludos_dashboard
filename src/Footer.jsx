@@ -13,15 +13,16 @@ const Footer = () => {
 const StyledFooter = styled.div`
     background-color: #404258;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 20;
     h6{
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 700;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-weight: 700;
         color: whitesmoke;
         font-size: larger;
+        margin: 0;
     }
     > img{
         position: relative;
@@ -29,7 +30,8 @@ const StyledFooter = styled.div`
         margin: 0;
         top: 0vh;
     }
-   gap: 0.2vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
    margin-left: 20%;
    margin-right: 20%;
    border-top-left-radius: 20px;
