@@ -35,7 +35,7 @@ const AppContainer = styled.div`
   min-height: 100vh;
   background-color: #FFFFFF;
   justify-items: center;
-  background-image: url('./src/media/Polygon_Luminary.svg') ;
+  background-image: url('./Polygon_Luminary.svg') ;
   background-repeat: no-repeat;
   background-attachment: fixed;
 `
