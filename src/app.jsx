@@ -45,6 +45,10 @@ const ChartsContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  @media (max-width: 768px) {
+  grid-template-columns: 1fr;
+  margin-bottom: 1vh;
+}
 `
 const TitleContainer = styled.div`
   text-align: center;
@@ -64,6 +68,16 @@ const TitleContainer = styled.div`
     width: 5vw;
     top: 1%;
     left: 69%;
+  }
+  @media (max-width: 768px) {
+    > img{
+      top: 12%;
+      left: 84%;
+      width: 15vw;
+    }
+    h1{
+      margin-bottom: 5vh;
+    }
   }
 `
 const GradioContainer = styled.div`

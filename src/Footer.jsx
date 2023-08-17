@@ -40,5 +40,16 @@ const StyledFooter = styled.div`
     background-color: #5a5c6e;
     cursor: pointer;
    }
+   @media (max-width: 768px) {
+    h6{
+        font-size: medium;
+    }> img{
+        width: 20vw;
+    }
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 `
 export default Footer

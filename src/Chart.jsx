@@ -27,4 +27,8 @@ const ChartContainer = styled.div`
   :hover{
     transform: scale(1);
   }
+  @media (max-width: 768px) {
+  grid-template-columns: 1fr;
+  margin: 2vh;
+}
 `
