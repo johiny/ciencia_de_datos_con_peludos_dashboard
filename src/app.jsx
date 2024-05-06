@@ -3,13 +3,14 @@ import styled from 'styled-components'
 import Chart from './Chart'
 import sciDog from './media/sci_dog.png'
 import Footer from './Footer'
+import Background from './Background'
 const app = () => {
   return (
     <AppContainer>
+      <Background/>
       <TitleContainer>
         <h1>Ciencia de Datos Con Peludos</h1>
         <img src={sciDog}/>
-        <h2>Descubramos que nos dicen los datos sobre nuestros mejores amigos</h2>
         </TitleContainer>
       <ChartsContainer>
       <Chart title='Top 10 perros mas populares' link='//datawrapper.dwcdn.net/eyaXM/1/'/>
@@ -33,9 +34,8 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #FFFFFF;
-  justify-items: center;
-  background-image: url('./Polygon_Luminary.svg') ;
+  background-color: #121212;
+  justify-items: center;;
   background-repeat: no-repeat;
   background-attachment: fixed;
 `
@@ -51,9 +51,15 @@ const ChartsContainer = styled.div`
 }
 `
 const TitleContainer = styled.div`
+  z-index: 20;
   text-align: center;
   color: #faf7f5;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
   h1{
+  margin: 0;
+  margin-top: auto;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 700;
   font-size: 5vh;
@@ -64,10 +70,9 @@ const TitleContainer = styled.div`
     font-size: 3vh;
   }
   > img{
-    position: absolute;
+    position: relative;
     width: 5vw;
-    top: 1%;
-    left: 69%;
+    
   }
   @media (max-width: 768px) {
     > img{

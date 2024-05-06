@@ -1,6 +1,6 @@
 import React from 'react'
 import DWChart from 'react-datawrapper-chart'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 const Chart = ({ title, link, width }) => {
   return (
     <ChartContainer width={width}>
@@ -23,9 +23,8 @@ const ChartContainer = styled.div`
   border-radius: 2%;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
   transition: all 0.5s ease-in-out;
-  transform: scale(1.04);
   :hover{
-    transform: scale(1);
+    transform: perspective(1000px) translateZ(150px);
   }
   @media (max-width: 768px) {
   grid-template-columns: 1fr;
